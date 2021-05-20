@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:moflix_aplli_flutter/pages/movieShow.dart';
 import 'package:moflix_aplli_flutter/themes/color.dart';
 
-class DiscoverPage extends StatefulWidget {
+class TrendingPage extends StatefulWidget {
 
   @override
-  _DiscoverPageState createState() => _DiscoverPageState();
+  _TrendingPageState createState() => _TrendingPageState();
 }
 
-class _DiscoverPageState extends State<DiscoverPage> {
+class _TrendingPageState extends State<TrendingPage> {
   
   final List<Locale> systemLocales = WidgetsBinding.instance!.window.locales;
   
@@ -19,7 +19,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
   bool isLoading = false;
   final apiKey = '061e411e417766bfc7b370d08d2fbd49';
   final apiUrl = 'https://api.themoviedb.org/3';
-  var discover = '/discover/movie';
+  var trending = '/trending/movie/day';
   var langue;
   var completeUrl;
 
@@ -36,7 +36,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
     });
     langue = systemLocales.first.languageCode;
     print(langue);
-    completeUrl = apiUrl + discover + '?api_key=' + apiKey + "&language=" + langue;
+    completeUrl = apiUrl + trending + '?api_key=' + apiKey + "&language=" + langue;
     var response = await http.get(Uri.parse(completeUrl));
     if(response.statusCode == 200){
       var items = json.decode(response.body)['results'];
@@ -58,10 +58,12 @@ class _DiscoverPageState extends State<DiscoverPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text("Films à découvrir", style: TextStyle(fontSize: 25, color: Colors.yellowAccent[700],),),
+        title: Text("Films tendance", style: TextStyle(fontSize: 25, color: Colors.yellowAccent[700],),),
         centerTitle: true,
-        backgroundColor: DarkSlateGray
+        backgroundColor: DarkSlateGray,
+        elevation: 0.0
       ),
       body: getBody(),
     );
