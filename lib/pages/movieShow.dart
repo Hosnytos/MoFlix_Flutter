@@ -54,6 +54,7 @@ class MovieShowImpl extends State<MovieShow> {
 
     return Scaffold(
       appBar: AppBar(
+        brightness: Brightness.dark,
         title: Text(commonTitleMovie.toString(), style: TextStyle(fontSize: 18, color: Colors.yellowAccent[700],),),
         centerTitle: true,
       ),
