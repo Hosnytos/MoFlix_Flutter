@@ -1,16 +1,7 @@
-# moflix_aplli_flutter
+# MoFlix - Flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* This app display a list of movies and details on each one of them. It is based on TMDB's (The Movie DataBase) Api.
+* Number of current pages :
+  - Discover movies
+  - Trending movies
+* This application can be ran in a Android device.
