@@ -4,11 +4,12 @@ import 'package:moflix_aplli_flutter/pages/movieShow.dart';
 import 'package:moflix_aplli_flutter/pages/trending.dart';
 import 'package:moflix_aplli_flutter/themes/color.dart';
 
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
-      primaryColor: primary
+      primaryColor: bottomColor,
     ),
     home : MyHomePage(),
     
@@ -31,6 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        brightness: Brightness.dark,
+        backgroundColor: Colors.transparent, // status bar color
         title: Text('MoFlix', style: TextStyle(fontSize: 25, color: whiteGhost,),),
         centerTitle: true,
         elevation: 0.0
@@ -45,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         controller: _pageController,
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: primary,
+        backgroundColor: bottomColor,
         selectedItemColor: yellowGrad,
         unselectedItemColor: whiteGhost,
         items: <BottomNavigationBarItem>[

@@ -26,6 +26,8 @@ dependencies:
   
   flutter_launcher_icons: "^0.9.0"
   
+  flutter_statusbarcolor: ^0.2.3
+
   flutter_localizations: 
     sdk: flutter
     
@@ -36,13 +38,14 @@ dependencies:
   http: ^0.13.3
   devicelocale: ^0.4.1
   intl: ^0.17.0
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
 flutter_icons:
-  image_path: "assets/moflix_1.png" 
+  image_path: "assets/moflix_icon.png" 
   android: "launcher_icon"
   ios: true
 # For information on the generic Dart part of this file, see the
