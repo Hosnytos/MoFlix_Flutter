@@ -68,7 +68,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
   }
   Widget getBody(){
     if(moviesD.contains(null) || moviesD.length < 0 || isLoading ){
-      return Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(primary),));
+      return Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(DarkSlateGray),));
     }
     return ListView.builder(
       itemCount: moviesD.length,
@@ -105,7 +105,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     height: 300,
                     width: 190,
                     decoration: BoxDecoration(
-                      color: primary,
+                      color: DarkSlateGray,
                       image: DecorationImage(
                         fit: BoxFit.fill,
                         image: 

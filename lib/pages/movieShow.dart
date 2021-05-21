@@ -90,7 +90,7 @@ class MovieShowImpl extends State<MovieShow> {
                     height: 500,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(60/2),
-                      color: primary,
+                      color: DarkSlateGray,
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: 
